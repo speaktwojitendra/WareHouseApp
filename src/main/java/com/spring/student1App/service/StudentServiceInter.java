@@ -1,0 +1,13 @@
+package com.spring.student1App.service;
+
+import java.util.List;
+
+import com.spring.student1App.model.Student;
+
+public interface StudentServiceInter {
+Student  saveOneStudent(Student s);
+	List<Student>findAllStudentData();
+	
+	Student findOneStudentData(Integer id);
+	void deleteStudentData(Integer id);
+}
