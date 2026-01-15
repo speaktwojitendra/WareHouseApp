@@ -16,7 +16,7 @@ public class EmployeeServiceimpl implements Iemployee_Service {
 	@Override
 	public Integer seveDetails(Employee e) {
 		// TODO Auto-generated method stub
-		int j=10;
+
 		Employee emp = repo.save(e);
 		return emp.getId();
 	}
