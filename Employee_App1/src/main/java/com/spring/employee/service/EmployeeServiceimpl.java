@@ -23,7 +23,7 @@ public class EmployeeServiceimpl implements Iemployee_Service {
 	@Override
 	public List<Employee> getEmpDetails() {
 		// TODO Auto-generated method stub
-int x=10;
+
 		return repo.findAll();
 	}
 
