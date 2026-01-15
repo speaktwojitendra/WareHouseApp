@@ -1,0 +1,65 @@
+package com.db;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class jb1  {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stubargs
+		try {
+			
+			
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			System.out.println("driver class loaded");
+	
+			
+			
+			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/ORCL","jk","1234");
+			System.out.println("connection established successfully");
+			Statement s=con.createStatement();
+			ResultSet rs=s.executeQuery("select * from employee order by empid desc");
+			ResultSetMetaData rm=rs.getMetaData();
+			int n=rm.getColumnCount();
+			for(int i=1;i<=n;i++) {
+				System.out.print(rm.getColumnName(i)+"  ");
+				
+			}
+			int count=0;
+			  ResultSet rs1=rs;
+			  System.out.println(rs1.getInt(1));
+		while(rs.next())	{
+			count++;
+			
+		}
+		int arr[]=new int[count];
+			
+		
+			System.out.println(count);
+			for(int i=count;i>0;i--) {
+				
+				rs1.next();
+			//arr[i-1]=rs1.getInt(1);
+			
+			}
+		
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+	
+	}
+
+}

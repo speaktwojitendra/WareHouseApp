@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculator Interface</title>
+
+<style type="text/css">
+  body {
+    background: linear-gradient(to bottom right, #e0f7fa, #e1bee7);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 340px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  input[type="text"] {
+    grid-column: span 2;
+    height: 40px;
+    font-size: 1em;
+    padding: 8px 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .box {
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .green { background-color: #43a047; }
+  .yellow { background-color: #f9a825; }
+  .orange { background-color: #fb8c00; }
+  .blue { background-color: #1e88e5; }
+
+  .box input[type="submit"] {
+    background: transparent;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+  }
+
+  .box input[type="submit"]:hover {
+    opacity: 0.9;
+  }
+
+</style>
+</head>
+<body>
+
+<form action="Arithmatic.jsp">
+  <input type="text" placeholder="Enter 1st number" name="First" style="background-color: blue; color: white;">
+  <input type="text" placeholder="Enter 2nd number" name="Second" style="background-color: red; color: white;">
+
+  <div class="box green">
+    <input type="submit" value="➕ Add" name="Operation">
+  </div>
+
+  <div class="box yellow">
+    <input type="submit" value="➖ Subtract" name="Operation">
+  </div>
+
+  <div class="box orange">
+    <input type="submit" value="✖ Multiply" name="Operation">
+  </div>
+
+  <div class="box blue">
+    <input type="submit" value="➗ Division" name="Operation">
+  </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\JITENDRA KUMAR NAYAK\eclipse-workspace\DipendancyInjection_field_Interface(Maven)\src\main\java\com\di\DipendancyInjection_field_Interface\Lion.java"/>
+			<item value="C:\Users\JITENDRA KUMAR NAYAK\eclipse-workspace\dipendancy_injection\src\main\java\com\field_injection\Main.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.servlet.filter.servlet_filter"/>
+			<item value="com.di.DipendancyInjection_field_Interface"/>
+		</list>
+		<list key="groupId">
+			<item value="com.servlet.filter"/>
+			<item value="com.di"/>
+		</list>
+		<list key="artifactId">
+			<item value="servlet_filter"/>
+			<item value="DipendancyInjection_field_Interface"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="com.calculator.jsp"/>
+			<item value="jsp_demo"/>
+			<item value="jsp"/>
+			<item value="servlet.filter"/>
+			<item value="spring_first"/>
+		</list>
+		<list key="name">
+			<item value="servlet.filter"/>
+		</list>
+		<list key="artifactId">
+			<item value="com.calculator.jsp"/>
+			<item value="jsp_demo"/>
+			<item value="jsp"/>
+			<item value="com.filter.servlet"/>
+			<item value="spring_first"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item key="width" value="480"/>
+		<item key="height" value="528"/>
+		<item key="x" value="528"/>
+		<item key="y" value="56"/>
+	</section>
+</section>

@@ -1,0 +1,29 @@
+package com.spring.jpa;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Operation_class {
+
+ @Autowired
+My_CurdRepository mycruCurdRepository;
+   
+	Employee_Details employeedtaDetails=new Employee_Details();
+
+
+	public void add_Details() {
+		
+		employeedtaDetails.setSal1(25000);
+		employeedtaDetails.setComm1(10);
+		employeedtaDetails.setDeptno1(1000);
+		employeedtaDetails.setEmpno1(50);
+		employeedtaDetails.setEname1("jbl");
+	
+		employeedtaDetails.setJob1("clerk");
+		employeedtaDetails.setMgr1(105);
+		
+		mycruCurdRepository.save(employeedtaDetails);
+	}
+
+}

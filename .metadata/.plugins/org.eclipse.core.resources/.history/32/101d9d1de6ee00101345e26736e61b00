@@ -1,0 +1,5 @@
+package com.spring.student1App.exception;
+
+public class DataNotFoundException {
+
+}

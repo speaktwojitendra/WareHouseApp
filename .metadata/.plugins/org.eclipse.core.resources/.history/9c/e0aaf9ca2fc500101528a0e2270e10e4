@@ -1,0 +1,41 @@
+package com.spring.jpa.practice;
+
+import java.util.List;
+import java.util.Scanner;
+import com.spring.jpa.practice.repository.CustomerRepository;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import com.spring.jpa.practice.customer.CUSTOMERDETAILS;
+import com.spring.jpa.practice.dboperation.DbOperation;
+
+@SpringBootApplication
+public class JpaPracticeApplication {
+
+    private final CustomerRepository customerRepository;
+
+    JpaPracticeApplication(CustomerRepository customerRepository) {
+        this.customerRepository = customerRepository;
+    }
+
+	public static void main(String[] args) {
+	ConfigurableApplicationContext configurableApplicationContext=	SpringApplication.run(JpaPracticeApplication.class, args);
+	DbOperation dbOperation=	configurableApplicationContext.getBean(DbOperation.class);
+	try (//dbOperation.addData();
+	//	dbOperation.addMultipleData();
+	//System.out.println(dbOperation.getDetails().get());	
+	Scanner sc = new Scanner(System.in)) {
+//		System.out.println("Enter your Id which you want to delete");
+		//int id=sc.nextInt();
+		//dbOperation.deleteDetails(id);
+		System.out.println("Enter your Name which you want to fetching");
+		String name=sc.nextLine();
+	List<CUSTOMERDETAILS>li=	dbOperation.getDetailsByName(name);
+	sysoSystem.out.println(li);
+	}
+	System.out.println("Welcome to jpa");
+	
+	}
+
+}

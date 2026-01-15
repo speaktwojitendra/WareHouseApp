@@ -1,0 +1,13 @@
+package com.jk;
+
+public class College {
+	public College() {
+		System.out.println("College Constructor called");
+	}
+Student stu;
+public College(Student stu1) {
+	super();
+	this.stu = stu1;
+}
+
+}

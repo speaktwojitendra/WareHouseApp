@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{/user/update}" method="post" th:object="${obj}">
+<pre>
+<input type="hidden" th:field="*{id}">
+user Type: <input type="text" th:field="*{userType}">
+user code: <input type="text" th:field="*{usercode}">
+user For : <input type="text" th:field="*{userFor}">
+user Email: <input type="text" th:field="*{userEmail}">
+userContact: <input type="text" th:field="*{userContact}">
+
+<input type="submit" value="Update">
+</pre>
+</form>
+</body>
+</html>

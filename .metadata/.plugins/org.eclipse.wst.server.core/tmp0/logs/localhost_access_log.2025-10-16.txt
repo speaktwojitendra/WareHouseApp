@@ -1,0 +1,9 @@
+127.0.0.1 - - [16/Oct/2025:23:43:28 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [16/Oct/2025:23:43:29 +0530] "GET /com.calculator.jsp/ HTTP/1.1" 404 775
+0:0:0:0:0:0:0:1 - - [16/Oct/2025:23:43:30 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [16/Oct/2025:23:43:44 +0530] "GET /com.calculator.jsp/NewFile.html HTTP/1.1" 200 559
+0:0:0:0:0:0:0:1 - - [16/Oct/2025:23:43:56 +0530] "GET /com.calculator.jsp/Calculator.jsp?first=10&second=10&Operation=Add HTTP/1.1" 200 137
+0:0:0:0:0:0:0:1 - - [16/Oct/2025:23:48:22 +0530] "GET /com.calculator.jsp/NewFile.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [16/Oct/2025:23:48:27 +0530] "GET /com.calculator.jsp/Calculator.jsp?first=64545&second=&Operation=Add HTTP/1.1" 200 137
+0:0:0:0:0:0:0:1 - - [16/Oct/2025:23:57:36 +0530] "GET /com.calculator.jsp/NewFile.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [16/Oct/2025:23:57:47 +0530] "GET /com.calculator.jsp/Calculator.jsp?first=10&second=20&Operation=Add HTTP/1.1" 200 135

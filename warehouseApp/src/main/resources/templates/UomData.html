@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Uom Data</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    margin: 0;
+    padding: 30px;
+    color: #fff;
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  th {
+    background: linear-gradient(90deg, #ff6b6b, #ffb86b);
+    color: #fff;
+    text-align: left;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    font-size: 14px;
+  }
+
+  tr:hover {
+    background: rgba(37,117,252,0.08);
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  a[href*="delete"] {
+    background: linear-gradient(90deg, #ff6b6b, #ff4757);
+    color: #fff;
+  }
+
+  a[href*="delete"]:hover {
+    background: #e84118;
+  }
+
+  a[href*="edit"] {
+    background: linear-gradient(90deg, #06b6d4, #3b82f6);
+    color: #fff;
+  }
+
+  a[href*="edit"]:hover {
+    background: #1e90ff;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    table, th, td {
+      font-size: 13px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+<h3>Uom Data</h3>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>uom_type</th>
+    <th>uom_model</th>
+    <th>uom_description</th>
+    <th>Actions</th>
+  </tr>
+  <tr th:each="ob:${uom}">
+    <td th:text="${ob.id}"></td>
+    <td th:text="${ob.uom_type}"></td>
+    <td th:text="${ob.uom_model}"></td>
+    <td th:text="${ob.uom_description}"></td>
+    <td>
+      <a th:href="@{/delete(id=${ob.id})}">Delete</a>
+      <a th:href="@{/edit(id=${ob.id})}">Edit</a>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

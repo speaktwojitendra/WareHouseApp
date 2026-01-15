@@ -1,0 +1,46 @@
+package com.spring.jpa.practice.dboperation;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.spring.jpa.practice.customer.CUSTOMERDETAILS;
+import com.spring.jpa.practice.repository.CustomerRepository;
+
+@Component
+public class DbOperation {
+	@Autowired
+	CustomerRepository customerRepository;
+//	
+//public void addData() {
+//	CUSTOMERDETAILS customerDetails=new CUSTOMERDETAILS();
+//	customerDetails.setAddress("USA");
+//	customerDetails.setAge(27);
+//	customerDetails.setId(300);
+//	customerDetails.setName("Robert");
+//	customerRepository.save(customerDetails);
+//}
+	
+public void addMultipleData() {
+	CUSTOMERDETAILS customerDetails1=new CUSTOMERDETAILS();
+	customerDetails1.setAddress("Newzland");
+	customerDetails1.setAge(27);
+	
+	customerDetails1.setName("mark");
+	CUSTOMERDETAILS customerDetails2=new CUSTOMERDETAILS();
+	customerDetails1.setAddress("USA");
+	customerDetails1.setAge(27);
+	
+	customerDetails1.setName("Dalton");
+	CUSTOMERDETAILS customerDetails3=new CUSTOMERDETAILS();
+	customerDetails1.setAddress("France");
+	customerDetails1.setAge(25);
+
+	customerDetails1.setName("speed");
+	
+	List<CUSTOMERDETAILS>customerdetails=List.of(customerDetails1, customerDetails2, customerDetails3);
+	customerRepository.saveAll(customerdetails);
+	
+}
+}

@@ -1,0 +1,68 @@
+package practice;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+//import jdk.internal.org.jline.terminal.TerminalBuilder.SystemOutput;
+
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+
+class Demo{
+	
+	public static void main(String[] args) {
+		
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			System.out.println("driver class loaded successfully");
+			System.out.println("loading please wait...");
+			
+			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/ORCL", "system","Jitu1234");
+			
+			System.out.println("connected with database Successfully");
+		Statement s=	con.createStatement();
+		s.addBatch("DROP TABLE EMP5 PURGE");
+		System.out.println("Emp5 table deleted successfully");
+		s.addBatch("CREATE TABLE EMP5( ID NUMBER,NAME VARCHAR2(10),SAL NUMBER(10))");
+		System.out.println("Emp table created successfully");
+		
+		s.addBatch("INSERT INTO EMP5 VALUES(100,'SHREYAS',20000)");
+		
+		System.out.println("one data inserted successfully");
+		s.addBatch("INSERT INTO EMP5 VALUES(101,'SHREYAS1',20001)");
+		
+		s.addBatch("INSERT INTO EMP5 VALUES(102,'SHREYAS2',20002)");
+		s.addBatch("INSERT INTO EMP5 VALUES(103,'SHREYAS3',20003)");
+		s.addBatch("INSERT INTO EMP5 VALUES(104,'SHREYAS4',20004)");
+		s.addBatch("INSERT INTO EMP5 VALUES(105,'SHREYAS5',20005)");
+		s.addBatch("INSERT INTO EMP5 VALUES(106,'SHREYAS6',20006)");
+		s.addBatch("UPDATE EMP5 SET NAME='JAISWAL' WHERE ID=103");
+		
+	s.executeBatch();
+	ResultSet rs=s.executeQuery("select * from EMP5");
+	ResultSetMetaData rm=rs.getMetaData();
+	int n=rm.getColumnCount();
+for(int i=1;i<=n;i++) {
+	System.out.print(rs.getNString(n));
+}
+	
+											
+	//rs.next();
+	while(rs.next()) {
+		System.out.println(rs.getInt(1)+"\t"+rs.getString(2)+"\t"+rs.getInt(3));
+		
+		
+	}
+	
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+	finally {	
+		
+		
+		
+	}
+		
+	}
+}

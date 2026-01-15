@@ -1,0 +1,93 @@
+understanding Terminologies:-
+------------------------------
+1)Persistance-
+===============
+It is the process by which we store the data for long time sothat we can use it in feature.
+
+2)Persistance store-
+=====================
+-It is the place where we store our data for long time.
+
+3)Persistance operation-
+--------------------------
+
+The operations are used while storing the data is known as .....
+
+
+4)Persistance logic-
+--------------------
+
+-logics which are used while storing the data is called Persistance logic.
+
+                             JDBC Architecture
+=============================================================================================
+
+-JDBC  is like a bridge that helps the java program to talk with a database. 
+-Architecture componenents are given below
+
+
+
+1)JDBC API-Provides Interfaces and classes for connecting and interacting with database.
+2)JDBC Drivermanager-
+--------------------
+It is a class which manages the driver and establish the connection with db.
+
+JDBC Driver-
+-------------
+It convert the java und
+
+3)Connection-
+---------
+It is the interface which represent the connection with db
+
+4)Statement-
+it is the interface which used to write or exicute the query.
+
+5)Resultset-
+-----------
+
+It is the interface which contain the result of db
+
+
+6) SQLException-
+-------------------
+This is the Exception class which handle the sqlexception
+
+JDBC drivers-
+-jdbc api uses the drivers to connect the db
+-these drivers acts as abridge between ajava program and the db converting java calls into the db specific calls.
+
+there are four main types of jdbc drivers are present
+
+*JDBC ODBC BRIDGE DRIVER(TYPE-1)
+*NATIVE API DRIVER(TYPE-2)
+*NETWORK PROTOCOL (TYPE-3)
+THIN DRIVER(TYPE -4)
+
+TYPE 1
+----------
+class name-sun.jdbc
+type 2-
+---------
+class name-oracle.jdbc.driver.OracleDriver
+-it is specific to the db
+
+type3-
+-------
+class name-com.sybase.jdbc.SybDriver for Sybase
+
+-Specific to the vender
+
+
+type 4-
+--------
+class name-oracle.jdbc.OracleDriver
+-specific to the db.
+
+=============
+
+
+
+
+
+Steps

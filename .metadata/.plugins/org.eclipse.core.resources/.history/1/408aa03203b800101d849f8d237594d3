@@ -1,0 +1,10 @@
+package com.spring.rest.controler;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class MyController {
+public String getHello() {
+	return "Hello Guys...";
+}
+}

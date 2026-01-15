@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           
+         <bean id ="stu" class="com.college.Student">
+         
+         <constructor-arg value="100"></constructor-arg>
+         <constructor-arg value="Jitendra"></constructor-arg>
+         <constructor-arg value="25"></constructor-arg>
+         
+         
+         
+         
+         
+         </bean>  
+           
+           
+           <bean id="c" class="com.college.College">
+           <constructor-arg ref="stu"></constructor-arg>
+           <constructor-arg value="Utkal University"></constructor-arg>
+           <constructor-arg >
+           
+           <list>
+           
+           <value>
+           10
+           </value>
+           
+           <value>
+           20
+           </value>
+           
+           <value>
+           30
+           </value>
+           
+           <value>
+           140
+           </value>
+           
+           </list>
+           
+           </constructor-arg>
+           </bean>
+           
+           
+           
+           
+           
+           
+           
+           </beans>

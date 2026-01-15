@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>UOM Update</title>
+<style>
+  :root {
+    --grad-1: #ff6b6b;
+    --grad-2: #feca57;
+    --grad-3: #48dbfb;
+    --grad-4: #5f27cd;
+    --card: #ffffff;
+    --radius: 12px;
+    --gap: 14px;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--grad-1), var(--grad-2), var(--grad-3), var(--grad-4));
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+  }
+
+  form {
+    background: var(--card);
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 600px;
+    display: grid;
+    gap: var(--gap);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+  }
+
+  label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  input[type="text"], select, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--grad-3);
+    box-shadow: 0 0 8px rgba(72,219,251,0.4);
+    outline: none;
+  }
+
+  .help {
+    font-size: 12px;
+    color: #777;
+    margin-top: 4px;
+  }
+
+  .actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(90deg, var(--grad-1), var(--grad-2));
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  }
+
+  .btn.secondary {
+    background: linear-gradient(90deg, var(--grad-3), var(--grad-4));
+  }
+
+  .msg {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <form action="/warehouse/update" method="post" th:object="${uom}" novalidate>
+    <div class="grid">
+      <div>
+        <label for="uom_type">Type</label>
+        <select id="uom_type" th:field="*{uom_type}">
+          <option value="">Select</option>
+          <option value="Box">Box</option>
+          <option value="Packet">Packet</option>
+          <option value="Kg">Kg</option>
+          <option value="Liters">Liters</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="uom_model">Model</label>
+        <input id="uom_model" type="text" th:field="*{uom_model}" placeholder="e.g., BOX-12" />
+        <div class="help">Short model code or name for quick reference.</div>
+      </div>
+    </div>
+
+    <div>
+      <label for="uom_description">Description</label>
+      <textarea id="uom_description" th:field="*{uom_description}" rows="4" placeholder="Optional details about this UOM"></textarea>
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="btn">Update</button>
+      <button type="reset" class="btn secondary">Reset</button>
+    </div>
+
+    <div class="msg">Message placeholder (e.g., success or error)</div>
+  </form>
+</body>
+</html>

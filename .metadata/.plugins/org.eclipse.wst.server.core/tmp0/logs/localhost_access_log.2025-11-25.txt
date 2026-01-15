@@ -1,0 +1,15 @@
+127.0.0.1 - - [25/Nov/2025:14:35:35 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [25/Nov/2025:14:35:36 +0530] "GET /com.calculator.jsp/ HTTP/1.1" 404 775
+0:0:0:0:0:0:0:1 - - [25/Nov/2025:14:35:36 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [25/Nov/2025:14:36:28 +0530] "GET /com.calculator.jsp/add HTTP/1.1" 404 778
+0:0:0:0:0:0:0:1 - - [25/Nov/2025:14:37:00 +0530] "GET /com.calculator.jsp/NewFile.html HTTP/1.1" 200 559
+0:0:0:0:0:0:0:1 - - [25/Nov/2025:14:37:12 +0530] "GET /com.calculator.jsp/Calculator.jsp?first=100&second=200&Operation=Add HTTP/1.1" 200 135
+0:0:0:0:0:0:0:1 - - [25/Nov/2025:14:37:16 +0530] "GET /com.calculator.jsp/Calculator.jsp?first=100&second=200&Operation=subtract HTTP/1.1" 200 140
+0:0:0:0:0:0:0:1 - - [25/Nov/2025:14:37:20 +0530] "GET /com.calculator.jsp/Calculator.jsp?first=100&second=200&Operation=Mul HTTP/1.1" 200 135
+0:0:0:0:0:0:0:1 - - [25/Nov/2025:14:37:24 +0530] "GET /com.calculator.jsp/Calculator.jsp?first=100&second=200&Operation=Div HTTP/1.1" 200 135
+0:0:0:0:0:0:0:1 - - [25/Nov/2025:14:37:39 +0530] "GET /com.calculator.jsp/NewFile1.html HTTP/1.1" 200 2107
+0:0:0:0:0:0:0:1 - - [25/Nov/2025:14:37:50 +0530] "GET /com.calculator.jsp/Arithmatic.jsp?First=100&Second=200&Operation=%E2%9E%95+Add HTTP/1.1" 200 224
+0:0:0:0:0:0:0:1 - - [25/Nov/2025:14:38:01 +0530] "GET /com.calculator.jsp/Arithmatic.jsp?First=100&Second=200&Operation=%E2%9E%96+Subtract HTTP/1.1" 200 232
+0:0:0:0:0:0:0:1 - - [25/Nov/2025:14:38:08 +0530] "GET /com.calculator.jsp/Arithmatic.jsp?First=100&Second=200&Operation=%E2%9C%96+Multiply HTTP/1.1" 200 240
+0:0:0:0:0:0:0:1 - - [25/Nov/2025:14:38:16 +0530] "GET /com.calculator.jsp/Arithmatic.jsp?First=100&Second=200&Operation=%E2%9E%97+Division HTTP/1.1" 200 226
+0:0:0:0:0:0:0:1 - - [25/Nov/2025:14:38:47 +0530] "GET /com.calculator.jsp/Arithmatic.jsp?First=100%2B200&Second=200%2B200&Operation=%E2%9E%95+Add HTTP/1.1" 500 4730

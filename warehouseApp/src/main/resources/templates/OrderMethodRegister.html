@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="/warehouse/ordermethod/save" method="post">
+<pre>
+Order mode: <input type="radio" name="orderMode" value="Sale"> sale  <input type="radio" name="orderMode" value="Purchase">  Purchase
+            
+orderCode : <input type="text" name="orderCode">
+            
+
+orderType: <select name="orderType">
+            <option>--select--</option>
+             <option value="Fifo">FIFO</option>
+             <option value="Lifo">LIFO</option>
+             <option value="Fefo">FEFO</option>
+            
+            </select>
+            
+            
+ orderAcpt: <input type="checkbox" name="orderAcpt" value="Multi-Model">Multi-Model
+             <input type="checkbox" name="orderAcpt" value="Accept Return">Accept Return
+
+
+description: <textarea rows="" cols="" name="description"></textarea>
+
+            
+<input type="submit" name="btn" value="Add">Add Order
+
+
+
+</pre>
+</form>
+</body>
+</html>

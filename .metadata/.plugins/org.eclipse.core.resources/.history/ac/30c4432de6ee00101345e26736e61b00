@@ -1,0 +1,37 @@
+package com.spring.student1App.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.config.ConfigDataLocationNotFoundException;
+import org.springframework.stereotype.Service;
+
+import com.spring.student1App.exception.DataNotFoundException;
+import com.spring.student1App.model.Student;
+import com.spring.student1App.repository.StudentRepo;
+
+@Service
+public class StudentServiceImp implements StudentServiceInter {
+@Autowired 
+StudentRepo repo;
+
+@Override
+public Student saveOneStudent(Student s) {
+	// TODO Auto-generated method stub
+	return  repo.save(s);
+}
+
+@Override
+public List<Student> findAllStudentData() {
+	// TODO Auto-generated method stub
+	return repo.findAll();
+}
+
+@Override
+public Student findOneStudentData(Integer id) {
+	// TODO Auto-generated method stub
+	return repo.findById(id).orElseThrow(()->new DataNotFoundException(null));
+}
+
+
+}

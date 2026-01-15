@@ -1,0 +1,22 @@
+package practice;
+import java.sql.*;
+import java.lang.*;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","jitu@123");
+			System.out.println("Connected Successfully");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

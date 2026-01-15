@@ -1,0 +1,69 @@
+package com.jitu;
+
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.Set;
+
+public class Student {
+	
+	public Student(String s1,String s2) {
+		System.out.println(s1+"---"+s2);
+	}
+	private  String name;
+	private Set<Integer> set;
+	
+	public Set<Integer> getSet() {
+		return set;
+	}
+	public void setSet(Set<Integer> set) {
+		this.set = set;
+	}
+	private Map<Integer,String>m;
+	
+	public Map<Integer, String> getM() {
+		return m;
+	}
+	public void setM(Map<Integer, String> m) {
+		this.m = m;
+	}
+	public Student() {
+		System.out.println("student constructor called");
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	private int age;
+	private int id;
+	
+private ArrayList<String> al;
+public ArrayList <String>getAl() {
+	return al;
+}
+public void setAl(ArrayList<String> al) {
+	this.al = al;
+}
+private Dependency d;
+public Dependency getD() {
+	return d;
+}
+public void setD(Dependency d) {
+	this.d = d;
+}
+
+
+}

@@ -1,0 +1,6 @@
+spring.application.name=user_gateway
+server.port=8095
+eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka
+spring.cloud.gateway.routes[0].id = USERSERVICE
+spring.cloud.gateway.routes[0].predicates[0].Path=/hii/demo/**
+spring.cloud.gateway.routes[0].uri = http://localhost:8031

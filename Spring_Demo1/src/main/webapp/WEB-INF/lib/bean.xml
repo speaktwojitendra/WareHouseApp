@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Your bean definitions go here -->
+    <bean id="d1" class="com.jitu.Dependency"></bean>
+   <bean id="s1" class="com.jitu.Student">
+        <property name="name" value="Jitendra" />
+        <property name="age" value="25" />
+        <property name="id" value="100" />
+        <property name="al">
+        <list>
+        
+         <value>Java</value>
+            <value>Servlet</value>
+            <value>SQL</value>
+        
+        
+        </list>
+        
+        </property>
+        
+        <property name="d" ref="d1"></property>
+        
+        <property name="m">
+        
+        <map>
+        
+        <entry key="100" value="jitu"></entry>
+        <entry key="101" value="jinu"></entry>
+        
+        <entry key="102" value="jhali"></entry>
+        <entry key="103" value="debaki"></entry>
+        
+        
+        </map>
+        
+        
+        
+        </property>
+        
+        
+        <property name="set">
+        
+        <set>
+        
+        <value>10</value>
+        <value>101</value>
+        <value>100</value>
+        <value>1001</value>
+        <value>400</value>
+        <value>140</value>
+        
+        
+        
+        </set>
+        
+        </property>
+        
+        <constructor-arg value="jiten"></constructor-arg>
+         <constructor-arg value="Nayak"></constructor-arg>
+        
+    </bean>
+
+</beans>

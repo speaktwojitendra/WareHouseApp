@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.java.time.LocalTime1&apos; to &apos;LocalDate_Time&apos;&#x0D;&#x0A;- Original project: &apos;Java8_Features&apos;&#x0D;&#x0A;- Original element: &apos;com.java.time.LocalTime1&apos;&#x0D;&#x0A;- Renamed element: &apos;com.java.time.LocalDate_Time&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LocalTime1&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.java.time{LocalTime1.java[LocalTime1" matchStrategy="1" name="LocalDate_Time" qualified="false" references="true" similarDeclarations="false" stamp="1761588103950" textual="false" version="1.0"/>
+</session>

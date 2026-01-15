@@ -1,0 +1,21 @@
+package com.spring.student1App.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.spring.student1App.model.Student;
+import com.spring.student1App.repository.StudentRepo;
+
+@Service
+public class StudentServiceImp implements StudentServiceInter {
+@Autowired 
+StudentRepo repo;
+
+@Override
+public Student saveOneStudent(Student s) {
+	// TODO Auto-generated method stub
+	return  repo.save(s);
+}
+
+
+}

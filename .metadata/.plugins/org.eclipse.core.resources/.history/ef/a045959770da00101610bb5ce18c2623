@@ -1,0 +1,38 @@
+package com.spring.security;
+
+import java.security.KeyPair;
+import java.util.Date;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.spring.security.demo_class.Demo;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.security.Keys;
+
+@SpringBootApplication
+public class SpringSecurityApplication {
+
+    
+	
+	private final static KeyPair keyPair = Keys.keyPairFor(SignatureAlgorithm.ES256);
+
+    
+
+	public static void main(String[] args) {
+		
+		SpringApplication.run(SpringSecurityApplication.class, args);
+		
+			String jwt=Jwts.builder().setSubject("jitendra")
+		            .setIssuer("my-app")
+		            .setIssuedAt(new Date())
+		            .setExpiration(new Date(System.currentTimeMillis() + 3600000)) // 1 hour
+		            .signWith(keyPair.getPrivate())
+		            .compact();
+			
+	System.out.println(jwt);
+
+		}
+	}
+
+

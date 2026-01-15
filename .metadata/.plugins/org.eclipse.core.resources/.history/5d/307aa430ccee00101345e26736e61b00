@@ -1,0 +1,7 @@
+spring.application.name=student1App
+
+
+spring.datasource.driver-class-name=jdbc:oracle:thin:@//localhost:1521/ORCL
+spring.datasource.username=jk
+server.ssl.key-password=1234
+spring.mvc.servlet.path=/student

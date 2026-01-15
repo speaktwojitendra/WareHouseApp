@@ -1,0 +1,5 @@
+package com.spring.student1App.service;
+
+public interface StudentServiceInter {
+
+}

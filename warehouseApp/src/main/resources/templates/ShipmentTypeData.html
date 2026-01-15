@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Shipment Type Data</title>
+    <style>
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background: #2575fc;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registered Shipment Types</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Shipment Mode</th>
+                <th>Shipment Code</th>
+                <th>Enable Shipment</th>
+                <th>Shipment Grade</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through the list -->
+            <tr th:each="ship : ${list}">
+                <td th:text="${ship.id}"></td>
+                <td th:text="${ship.shipmentMode}"></td>
+                <td th:text="${ship.shipmentCode}"></td>
+                <td th:text="${ship.enableShipment}"></td>
+                <td th:text="${ship.shipmentGrade}"></td>
+                <td th:text="${ship.description}"></td>
+                <td>
+                    <a th:href="@{/shipmentType/edit(id=${ship.id})}">Edit</a> |
+                    <a th:href="@{/shipmentType/delete(id=${ship.id})}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

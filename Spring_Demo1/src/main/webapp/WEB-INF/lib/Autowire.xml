@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           
+           
+           <bean id="p" class="com.autowiring.Patient">
+           <constructor-arg value="100"></constructor-arg>
+           <constructor-arg value="25"></constructor-arg>
+           <constructor-arg value="Jitendra kumar nayak"></constructor-arg>
+           <constructor-arg value="Gomundia"></constructor-arg>
+           
+           
+           
+           
+           
+           </bean>
+           
+           <bean id ="h" class="com.autowiring.Hospital" autowire="byName">
+           
+           
+           
+           <property name="HospitalName" value="Sum Hospital"></property>
+           
+           </bean>
+           
+           
+           <bean id="col" class="com.autowiring.College">
+           
+           <constructor-arg value="100"></constructor-arg>
+           <constructor-arg value="IIT"></constructor-arg>
+           
+           
+           </bean>
+           <bean id="s" class="com.autowiring.Student" autowire="byName">
+           <property name="sid" value="200"></property>
+           
+           </bean>
+</beans>
