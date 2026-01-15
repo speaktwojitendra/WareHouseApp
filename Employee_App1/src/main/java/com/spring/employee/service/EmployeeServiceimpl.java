@@ -17,10 +17,6 @@ public class EmployeeServiceimpl implements Iemployee_Service {
 	public Integer seveDetails(Employee e) {
 		// TODO Auto-generated method stub
 
-		int y = 40;
-
-		int x = 10;
-
 		Employee emp = repo.save(e);
 		return emp.getId();
 	}
